@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaditya/myanimelist-api.git"
+  },
   "keywords": [
     "MyAnimeList",
     "API",
@@ -18,9 +22,9 @@
   "author": "Aaditya Chakravarty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aaditya/mal-js/issues"
+    "url": "https://github.com/aaditya/myanimelist-api/issues"
   },
-  "homepage": "https://github.com/aaditya/mal-js#readme",
+  "homepage": "https://github.com/aaditya/myanimelist-api#readme",
   "dependencies": {
     "axios": "^0.21.1"
   },

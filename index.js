@@ -19,8 +19,7 @@ class MalAPI {
         }
 
         if (options.accessToken) {
-            this.accessToken = options.accessToken;
-            this.setAuthInterceptor();
+            this.setAuthInterceptor(options.accessToken);
         }
 
         if (options.refreshToken) {
@@ -28,9 +27,9 @@ class MalAPI {
         }
     }
 
-    setAuthInterceptor() {
+    setAuthInterceptor(accessToken) {
         axios.interceptors.request.use(function (config) {
-            config.headers.Authorization = `Bearer ${this.accessToken}`;
+            config.headers.Authorization = `Bearer ${accessToken}`;
             return config;
         });
     }
@@ -93,11 +92,11 @@ class MalAPI {
         const params = {
             q: key,
             limit: 100,
-            fields: fields.join(','),
+            fields: defaults.fields.join(','),
             ...options
         };
 
-        return this.formRequest('GET', '/', params);
+        return this.formRequest('GET', '', params);
     }
 
     findSeason(season, year, options = {}) {
@@ -107,7 +106,7 @@ class MalAPI {
 
         const params = {
             limit: 100,
-            fields: fields.join(','),
+            fields: defaults.fields.join(','),
             ...options
         };
 
