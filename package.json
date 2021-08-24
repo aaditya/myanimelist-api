@@ -1,0 +1,30 @@
+{
+  "name": "mal-js",
+  "version": "0.0.1",
+  "description": "A wrapper for Official MyAnimeList REST API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MyAnimeList",
+    "API",
+    "Anime",
+    "JS",
+    "Javascript",
+    "Node",
+    "NodeJS"
+  ],
+  "author": "Aaditya Chakravarty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaditya/mal-js/issues"
+  },
+  "homepage": "https://github.com/aaditya/mal-js#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}

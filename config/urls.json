@@ -1,0 +1,4 @@
+{
+    "AUTH": "https://myanimelist.net/v1/oauth2",
+    "ANIME": "https://api.myanimelist.net/v2/anime"
+}
