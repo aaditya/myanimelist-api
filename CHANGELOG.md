@@ -10,3 +10,7 @@
 
 * Segregated Code for modularity.
 * Added Validations in Initialization.
+
+# 0.1.1 (25-Aug-2021)
+
+* Removed Refresh token validation.
