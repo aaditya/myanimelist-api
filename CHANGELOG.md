@@ -1,3 +1,12 @@
 # 0.0.1 (24-Aug-2021)
 
-* Initial Build
+* Initial Build.
+
+# 0.0.2 (24-Aug-2021)
+
+* Bug Fixes for URLs.
+
+# 0.1.0 (25-Aug-2021)
+
+* Segregated Code for modularity.
+* Added Validations in Initialization.
