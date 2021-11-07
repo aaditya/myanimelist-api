@@ -28,3 +28,11 @@
 * Added all supported forum endpoints.
 
 * Fixed Manga Ranking Bug.
+
+# 0.1.5 (07-Nov-2021)
+
+* Fixed Anime Suggestions.
+
+# 1.0.0 (07-Nov-2021)
+
+* Added Documentation.
