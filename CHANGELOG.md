@@ -14,3 +14,11 @@
 # 0.1.1 (25-Aug-2021)
 
 * Removed Refresh token validation.
+
+# 0.1.2 (07-Nov-2021)
+
+* Added all supported anime endpoints.
+
+# 0.1.3 (07-Nov-2021)
+
+* Added all supported manga and user endpoints.
