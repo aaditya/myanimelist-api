@@ -1,7 +1,7 @@
 {
   "name": "myanimelist-api",
   "version": "0.1.1",
-  "description": "A wrapper for Official MyAnimeList REST API.",
+  "description": "A wrapper for Official MyAnimeList REST API V2.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

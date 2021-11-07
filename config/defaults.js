@@ -39,3 +39,15 @@ exports.seasons = [
     "summer",
     "fall"
 ];
+
+exports.ranking = [
+    "all",
+    "airing",
+    "upcoming",
+    "tv",
+    "ova",
+    "movie",
+    "special",
+    "bypopularity",
+    "favorite"
+]
