@@ -2,7 +2,9 @@ const Base = require('./lib/base');
 
 const configurations = {
     auth: "auth",
-    anime: "anime"
+    anime: "anime",
+    manga: "manga",
+    user: "user"
 }
 
 Object.keys(configurations).forEach(prop => {

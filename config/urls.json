@@ -1,4 +1,7 @@
 {
     "AUTH": "https://myanimelist.net/v1/oauth2",
-    "ANIME": "https://api.myanimelist.net/v2/anime"
+    "ANIME": "https://api.myanimelist.net/v2/anime",
+    "FORUM": "https://api.myanimelist.net/v2/forum",
+    "MANGA": "https://api.myanimelist.net/v2/manga",
+    "USERS": "https://api.myanimelist.net/v2/users"
 }

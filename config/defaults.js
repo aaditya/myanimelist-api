@@ -40,7 +40,7 @@ exports.seasons = [
     "fall"
 ];
 
-exports.ranking = [
+exports.animeRanking = [
     "all",
     "airing",
     "upcoming",
@@ -48,6 +48,19 @@ exports.ranking = [
     "ova",
     "movie",
     "special",
+    "bypopularity",
+    "favorite"
+]
+
+exports.mangaRanking = [
+    "all",
+    "manga",
+    "oneshots",
+    "doujin",
+    "lightnovels",
+    "novels",
+    "manhwa",
+    "manhua",
     "bypopularity",
     "favorite"
 ]
