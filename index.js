@@ -3,6 +3,7 @@ const Base = require('./lib/base');
 const configurations = {
     auth: "auth",
     anime: "anime",
+    forum: "forum",
     manga: "manga",
     user: "user"
 }

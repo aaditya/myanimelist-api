@@ -22,3 +22,9 @@
 # 0.1.3 (07-Nov-2021)
 
 * Added all supported manga and user endpoints.
+
+# 0.1.4 (07-Nov-2021)
+
+* Added all supported forum endpoints.
+
+* Fixed Manga Ranking Bug.
