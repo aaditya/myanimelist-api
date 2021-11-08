@@ -46,7 +46,7 @@ Error Handling is same as how [Axios handles it](https://github.com/axios/axios#
 Since MAL V2 API uses oAuth 2 for authorization, you need to access MAL Web Page to allow your user to interact with your app.
 
 ```js
-const { challengeCode, url } = await mal.auth.getChallenge();
+const { challengeCode, url } = mal.auth.getChallenge();
 ```
 
 In the above snippet, `challengeCode` is a PKCE compliant 128 character key which is generated in the `getChallenge()` function. 
@@ -57,7 +57,7 @@ After that, you will receive a `code` in the redirect URL from MAL.
 Now, using that `code` and the `challengeCode`, you need to do the following:
 
 ```js
-const { data } = await mal.auth.getRefreshToken();
+const { data } = await mal.auth.getRefreshToken(code, challengeCode);
 ```
 
 The `data` has the access token as well as the refresh token.
@@ -65,7 +65,7 @@ The `data` has the access token as well as the refresh token.
 #### Refresh your access token
 
 ```js
-const { data } = await mal.auth.refreshAccessToken();
+const { data } = await mal.auth.refreshAccessToken(refreshToken);
 ```
 
 To reissue the refresh token, you need to re-authorize your user on MAL, Follow from step 1.
@@ -88,7 +88,7 @@ const mal = new MyAnimeList({
 #### Details of a specific anime
 
 ```js
-const { data } = await mal.anime.details(11757);
+const { data } = await mal.anime.details(11757, options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -99,7 +99,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Search 
 
 ```js
-const { data } = await mal.anime.list("Your Name");
+const { data } = await mal.anime.list("Your Name", options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -110,7 +110,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Seasonal Anime 
 
 ```js
-const { data } = await mal.anime.seasonal("summer", 2012);
+const { data } = await mal.anime.seasonal("summer", 2012, options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -122,7 +122,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Ranking 
 
 ```js
-const { data } = await mal.anime.ranking("all");
+const { data } = await mal.anime.ranking("all", options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -133,7 +133,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Suggested Anime 
 
 ```js
-const { data } = await mal.anime.suggestions();
+const { data } = await mal.anime.suggestions(options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -145,7 +145,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Details of a specific Manga
 
 ```js
-const { data } = await mal.manga.details(21479);
+const { data } = await mal.manga.details(21479, options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -156,7 +156,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Search 
 
 ```js
-const { data } = await mal.manga.list("Your Name");
+const { data } = await mal.manga.list("Your Name", options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -167,7 +167,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Ranking 
 
 ```js
-const { data } = await mal.manga.ranking("all");
+const { data } = await mal.manga.ranking("all", options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -180,7 +180,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Get Boards 
 
 ```js
-const { data } = await mal.forum.boards();
+const { data } = await mal.forum.boards(options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -190,7 +190,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Get Topics 
 
 ```js
-const { data } = await mal.forum.topics();
+const { data } = await mal.forum.topics(options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -200,7 +200,7 @@ options | Object | Yes | [Reference](https://myanimelist.net/apiconfig/reference
 #### Get Topic Details
 
 ```js
-const { data } = await mal.forum.details(17876);
+const { data } = await mal.forum.details(17876, options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -213,7 +213,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Details 
 
 ```js
-const { data } = await mal.user.details();
+const { data } = await mal.user.details(username, options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -224,7 +224,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Get Anime List 
 
 ```js
-const { data } = await mal.user.listAnime();
+const { data } = await mal.user.listAnime(username, options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -235,7 +235,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Update Anime List Entry 
 
 ```js
-const { data } = await mal.user.updateAnime(11757, {...});
+const { data } = await mal.user.updateAnime(11757, body);
 ```
 
 | Parameter | Type | Required | Reference
@@ -256,7 +256,7 @@ id | Number | Yes | [Reference](https://myanimelist.net/apiconfig/references/api
 #### Get Manga List 
 
 ```js
-const { data } = await mal.user.listManga();
+const { data } = await mal.user.listManga(username, options);
 ```
 
 | Parameter | Type | Required | Reference
@@ -267,7 +267,7 @@ options | Object | No | [Reference](https://myanimelist.net/apiconfig/references
 #### Update Manga List Entry 
 
 ```js
-const { data } = await mal.user.updateManga(11757, {...});
+const { data } = await mal.user.updateManga(11757, body);
 ```
 
 | Parameter | Type | Required | Reference
