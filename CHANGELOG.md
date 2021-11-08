@@ -36,3 +36,7 @@
 # 1.0.0 (07-Nov-2021)
 
 * Added Documentation.
+
+# 1.0.1 (09-Nov-2021)
+
+* Updated Readme.
